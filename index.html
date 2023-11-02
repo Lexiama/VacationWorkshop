@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vacation Resort</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!--NAV-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Luna Oasis Beachfront Resort</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Explore</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Things To Do
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--END NAV-->
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 150vh"
+    >
+      <div class="messageDiv text-center" id="messageDiv">
+        
+      </div>
+      <div class="card" style="width: 50%">
+        <div class="card-body">
+          <div class="col text-center">
+            <h2 class="position-relative d-inline-block">Vacation Workshop</h2>
+          </div>
+          <form id="booking-form">
+            <div class="mb-3">
+              <label for="fname"><i class="fullName"></i> Full Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="John M. Doe"
+                class="form-control mb-2"
+              />
+              <label for="email"> Email</label>
+              <input
+                type="text"
+                id="inputEmail"
+                name="email"
+                placeholder="john@example.com"
+                class="form-control mb-2"
+              />
+
+              <label for="PickupDate" class="form-label">Check In:</label>
+              <input type="date" class="form-control" id="InputcheckIn" />
+            </div>
+            <div class="mb-3">
+              <label for="NumberofDays" class="form-label"
+                >Number Of Nights:</label
+              >
+              <input
+                type="Number"
+                class="form-control"
+                id="inputNumberOfNights"
+              />
+            </div>
+
+            <!--ROOM OPTIONS-->
+
+            <fieldset class="mb-3">
+              <legend>Select a room type:</legend>
+
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="roomType"
+                  id="kingRadioBtn"
+                  value="kingBed"
+                />
+                <label class="form-check-label" for="kingRadioBtn">
+                  King Suite</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="roomType"
+                  id="QueenRadioBtn"
+                  value="queenBed"
+                />
+                <label class="form-check-label" for="gpsRadioBtn"
+                  >Queen Suite
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="roomType"
+                  id="twoBedRadioBtn"
+                  value="twoBed"
+                />
+                <label class="form-check-label" for="twoRadioBtn"
+                  >2 Bedroom Suite</label
+                >
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="state">Adults:</label>
+                  <input
+                    type="number"
+                    id="numberOfAdults"
+                    name="adults"
+                    class="form-control mb-2"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="numberOfKids">Kids:</label>
+                  <input
+                    type="number"
+                    id="numberOfKids"
+                    name="kids"
+                    class="form-control mb-2"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="row g-3 align-items-center mb-3"></div>
+
+            <!--DISCOUNTS-->
+
+            <fieldset class="mb-3">
+              <legend>Discounts:</legend>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="no-discount"
+                  value="noDiscount"
+                />
+                <label class="form-check-label" for="no-discount"> None </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  name="discount"
+                  id="senior-discount"
+                  value="seniordiscount"
+                />
+                <label class="form-check-label" for="senior-discount"
+                  >senior Discount (10%)</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  name="miltaryDiscount"
+                  id="military-discount"
+                  value="militaryRadioBtn"
+                />
+                <label class="form-check-label" for="military-discount"
+                  >miltary Discount (20%)</label
+                >
+              </div>
+            </fieldset>
+
+            <button
+              class="btn btn-outline-secondary mb-3"
+              type="submit"
+              id="estBtn"
+            >
+              Estimate Total Cost
+            </button>
+
+            <!-- TOTAL-->
+            <div class="row g-1 align-items-center mb-10">
+              <label for="outputTotal" class="col-auto"
+                >Total Cost Of stay:</label
+              >
+              <input
+                type="text"
+                name=""
+                id="outputTotal"
+                class="form-control col-auto"
+                readonly
+              />
+              <div class="row">
+                <div class="col">
+                  <p>Original Room Cost :</p>
+                </div>
+                <div class="col">
+                  <p id="costOfRoom">$xx.xx</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>Discounts :</p>
+                </div>
+                <div class="col">
+                  <p id="discountCost">$xx.xx</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>Room Cost (After Discount) :</p>
+                </div>
+                <div class="col">
+                  <p id="discountedRoomCost">$xx.xx</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>Tax :</p>
+                </div>
+                <div class="col">
+                  <p id="taxCost">$xx.xx</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>Total Cost :</p>
+                </div>
+                <div class="col">
+                  <p id="totalCost">$xx.xx</p>
+                </div>
+              </div>
+              <div class="row text-center">
+                <p id="confirmationCode"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
